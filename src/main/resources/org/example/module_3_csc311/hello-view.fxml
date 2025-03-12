@@ -1,16 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.module_3_csc311.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.module_3_csc311.HelloController" stylesheets="@styles.css">
+   <top>
+      <HBox prefHeight="50.0" prefWidth="600.0" styleClass="hbox" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="verifyButton" styleClass="button" text="Verify" onAction="#onVerify" />
+            <Button fx:id="refreshButton" styleClass="button" text="Refresh" onAction="#onRefresh" />
+            <TextField fx:id="resultField" styleClass="text-field" prefHeight="30.0" prefWidth="300.0" editable="false" />
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <HBox prefHeight="200.0" prefWidth="600.0" styleClass="hbox" BorderPane.alignment="CENTER">
+         <children>
+            <!-- StackPane for Card 1 -->
+            <StackPane>
+               <Rectangle fx:id="backgroundOne" width="100" height="150" styleClass="card-background"/>
+               <ImageView fx:id="cardOne" styleClass="image-view" fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+            </StackPane>
+
+            <!-- StackPane for Card 2 -->
+            <StackPane>
+               <Rectangle fx:id="backgroundTwo" width="100" height="150" styleClass="card-background"/>
+               <ImageView fx:id="cardTwo" styleClass="image-view" fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+            </StackPane>
+
+            <!-- StackPane for Card 3 -->
+            <StackPane>
+               <Rectangle fx:id="backgroundThree" width="100" height="150" styleClass="card-background"/>
+               <ImageView fx:id="cardThree" styleClass="image-view" fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+            </StackPane>
+
+            <!-- StackPane for Card 4 -->
+            <StackPane>
+               <Rectangle fx:id="backgroundFour" width="100" height="150" styleClass="card-background"/>
+               <ImageView fx:id="cardFour" styleClass="image-view" fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+            </StackPane>
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <HBox prefHeight="50.0" prefWidth="600.0" styleClass="hbox" BorderPane.alignment="CENTER">
+         <children>
+            <Text styleClass="text" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter an expression:" wrappingWidth="142.1367244720459" />
+            <TextField fx:id="inputField" styleClass="text-field" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

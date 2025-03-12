@@ -1,0 +1,63 @@
+/* Root styles (optional) */
+.root {
+    -fx-background-color: green; /* Light gray background for the entire scene */
+}
+
+/* TextField styling */
+.text-field {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #cccccc; /* Light gray border */
+    -fx-border-radius: 5px; /* Rounded corners */
+    -fx-padding: 5px; /* Inner padding */
+    -fx-font-size: 14px; /* Font size */
+}
+
+.text-field:focused {
+    -fx-border-color: #4CAF50; /* Green border when focused */
+}
+
+/* Button styling */
+.button {
+    -fx-background-color: #4CAF50; /* Green background */
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 14px; /* Font size */
+    -fx-border-radius: 5px; /* Rounded corners */
+    -fx-padding: 10px 20px; /* Padding */
+    -fx-cursor: hand; /* Hand cursor on hover */
+}
+
+.button:hover {
+    -fx-background-color: #45a049; /* Darker green on hover */
+}
+
+.button:pressed {
+    -fx-background-color: #3d8b40; /* Even darker green when pressed */
+}
+
+/* ImageView styling */
+.image-view {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 0); /* Drop shadow effect */
+    -fx-border-color: #cccccc; /* Light gray border */
+    -fx-border-radius: 5px; /* Rounded corners */
+}
+
+/* HBox styling (optional) */
+.hbox {
+    -fx-spacing: 10px; /* Spacing between children */
+    -fx-padding: 10px; /* Padding inside the HBox */
+    -fx-alignment: center; /* Center alignment for children */
+}
+
+/* Text styling */
+.text {
+    -fx-font-size: 16px; /* Font size */
+    -fx-fill: #333333; /* Dark gray text color */
+}
+
+.card-background {
+    -fx-fill: #ffffff; /* Light gray background */
+    -fx-arc-width: 10px; /* Rounded corners */
+    -fx-arc-height: 10px; /* Rounded corners */
+    -fx-stroke: #a9a9a9; /* Dark gray border */
+    -fx-stroke-width: 2px;
+}
